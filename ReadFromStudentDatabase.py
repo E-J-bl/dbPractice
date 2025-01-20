@@ -47,12 +47,12 @@ group by gender"""
 gender_count=cursor.execute(number_per_gender_query).fetchall()
 
 number_firstname_count_query="""
-select firstname, count(firstname)
+select substring(firstname,1,1), sum(age)
 from students
 group by substring(firstname,1,1)
 """
 
-name_count_result=cursor.execute(number_firstname_count_query).fetchall()
+age_sum_result=cursor.execute(number_firstname_count_query).fetchall()
 conn.close()
 
 print(first_student,more_students,other_students,sep='\n', end="\n\n")
@@ -64,4 +64,4 @@ print(j_start_response)
 
 print(sorted(gender_count,key=lambda s:s[1]))
 
-print(name_count_result)
+print(sorted(age_sum_result,key=lambda s:s[1]))
