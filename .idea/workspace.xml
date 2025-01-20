@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57ca130a-9a39-4dd5-b801-8f0cd411f00d" name="Changes" comment="read and update">
+    <list default="true" id="57ca130a-9a39-4dd5-b801-8f0cd411f00d" name="Changes" comment="read more">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ReadFromStudentDatabase.py" beforeDir="false" afterPath="$PROJECT_DIR$/ReadFromStudentDatabase.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,6 +62,33 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="ReadFromStudentDatabase" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Pycharm_projects" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ReadFromStudentDatabase.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.ReadFromStudentDatabase" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -79,7 +107,7 @@
       <updated>1737382544403</updated>
       <workItem from="1737382545430" duration="11000" />
       <workItem from="1737382789168" duration="2344000" />
-      <workItem from="1737386188415" duration="1101000" />
+      <workItem from="1737386188415" duration="2053000" />
     </task>
     <task id="LOCAL-00001" summary="second-edition">
       <option name="closed" value="true" />
@@ -129,7 +157,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737387117898</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="read more">
+      <option name="closed" value="true" />
+      <created>1737387543550</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1737387543550</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,10 +178,11 @@
     <MESSAGE value="more data inputting" />
     <MESSAGE value="adding more" />
     <MESSAGE value="read and update" />
-    <option name="LAST_COMMIT_MESSAGE" value="read and update" />
+    <MESSAGE value="read more" />
+    <option name="LAST_COMMIT_MESSAGE" value="read more" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/dbPractice$ReadFromStudentDatabase.coverage" NAME="ReadFromStudentDatabase Coverage Results" MODIFIED="1737387064269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/dbPractice$ReadFromStudentDatabase.coverage" NAME="ReadFromStudentDatabase Coverage Results" MODIFIED="1737388198812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/dbPractice$DeleteStudentDatabase.coverage" NAME="DeleteStudentDatabase Coverage Results" MODIFIED="1737385089476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/dbPractice$CreateStudentDatabase.coverage" NAME="CreateStudentDatabase Coverage Results" MODIFIED="1737386295202" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/dbPractice$WriteToStudentDatabase.coverage" NAME="WriteToStudentDatabase Coverage Results" MODIFIED="1737386472605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
