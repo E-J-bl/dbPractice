@@ -27,7 +27,22 @@ for _ in range(10):
     cursor.execute(parameterised_insert_query,(f_name,l_name,age,gender))
 
 
+'''
 
+insert_query = """
+INSERT INTO students (firstname,lastname ,age,gender)
+ VALUES 
+        ('Milan','Gal',69,'Eye of Rah'),
+        ('Eleanore','Shiner',1000,'amogus'),
+        ('Rayhan','Chowdhury','Eternal','Existence'),
+        ('Denys','Zazuliak',0,'GOD'),
+        ('Adam','Reeves',16,'Male'),
+        ('Sami','Hafezgi',100,'Soliaire');
+        
+"""
+cursor.execute(insert_query)
+
+'''
 conn.commit()
 conn.close()
 

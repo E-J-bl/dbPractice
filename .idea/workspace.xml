@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57ca130a-9a39-4dd5-b801-8f0cd411f00d" name="Changes" comment="more data inputting">
+    <list default="true" id="57ca130a-9a39-4dd5-b801-8f0cd411f00d" name="Changes" comment="adding more">
+      <change afterPath="$PROJECT_DIR$/DeleteStudentDatabase.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReadFromStudentDatabase.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +49,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.CreateStudentDatabase.executor": "Run",
+    "Python.DeleteStudentDatabase.executor": "Run",
     "Python.WriteToStudentDatabase.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -76,7 +80,7 @@
       <option name="presentableId" value="Default" />
       <updated>1737382544403</updated>
       <workItem from="1737382545430" duration="11000" />
-      <workItem from="1737382789168" duration="1780000" />
+      <workItem from="1737382789168" duration="2344000" />
     </task>
     <task id="LOCAL-00001" summary="second-edition">
       <option name="closed" value="true" />
@@ -110,7 +114,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737384381551</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="adding more">
+      <option name="closed" value="true" />
+      <created>1737385138024</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1737385138024</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,10 +133,12 @@
     <MESSAGE value="database" />
     <MESSAGE value="requirements added" />
     <MESSAGE value="more data inputting" />
-    <option name="LAST_COMMIT_MESSAGE" value="more data inputting" />
+    <MESSAGE value="adding more" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding more" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/dbPractice$DeleteStudentDatabase.coverage" NAME="DeleteStudentDatabase Coverage Results" MODIFIED="1737385089476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/dbPractice$CreateStudentDatabase.coverage" NAME="CreateStudentDatabase Coverage Results" MODIFIED="1737383774288" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/dbPractice$WriteToStudentDatabase.coverage" NAME="WriteToStudentDatabase Coverage Results" MODIFIED="1737384295857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/dbPractice$WriteToStudentDatabase.coverage" NAME="WriteToStudentDatabase Coverage Results" MODIFIED="1737385099082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
