@@ -13,7 +13,6 @@ values
     (?, ?, ?, ?)
 """
 
-conn=sqlite3.connect('students.sqlite')
 cursor = conn.cursor()
 
 fake.random.seed(42)
@@ -27,7 +26,7 @@ for _ in range(10):
     cursor.execute(parameterised_insert_query,(f_name,l_name,age,gender))
 
 
-'''
+
 
 insert_query = """
 INSERT INTO students (firstname,lastname ,age,gender)
@@ -42,7 +41,7 @@ INSERT INTO students (firstname,lastname ,age,gender)
 """
 cursor.execute(insert_query)
 
-'''
+
 conn.commit()
 conn.close()
 
