@@ -48,4 +48,3 @@ with sqlite3.connect("sm_app.sqlite") as conn:
     cursor.execute(create_likes_table)
     cursor.execute(create_comments_table)
     conn.commit()
-    conn.close()

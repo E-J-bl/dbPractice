@@ -45,7 +45,7 @@ c = conn.cursor()
 #                               ('Interesting Game', 'It was a fantastic game of tennis', 5),
 #                               ('Party', 'Anyone up for a late-night party today?', 3)
 #                               ])
-
+#
 #
 # c.executemany(param_new_comments,[('Count me in', 1, 6),
 #                                   ('What sort of help?', 5, 3),
@@ -53,7 +53,7 @@ c = conn.cursor()
 #                                   ('I was rooting for Nadal though', 4, 5),
 #                                   ('Help with your thesis?', 2, 3),
 #                                   ('Many congratulations', 5, 4)])
-
+#
 # c.executemany(param_new_like,[(1, 6),
 # (2, 3),
 # (1, 5),
