@@ -15,7 +15,7 @@ def execute_read_query(connection, query):
 select_users = "SELECT * from users"
 with sqlite3.connect("sm_app.sqlite") as conn:
     users = execute_read_query(conn, select_users)
-users.insert(0,     ('id','name','age','gender','nationality'))
+users.insert(0,('id','name','age','gender','nationality'))
 print(tabulate(users[1:], headers=users[0], tablefmt="psql"))
 
 select_user_activity = """

@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57ca130a-9a39-4dd5-b801-8f0cd411f00d" name="Changes" comment="adding more">
-      <change afterPath="$PROJECT_DIR$/sm_app/sm_read.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Pycharm_projects.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Pycharm_projects.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sm_app/sm_create_table.py" beforeDir="false" afterPath="$PROJECT_DIR$/sm_app/sm_create_table.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sm_app/sm_read.py" beforeDir="false" afterPath="$PROJECT_DIR$/sm_app/sm_read.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sm_app/write_to_social_media.py" beforeDir="false" afterPath="$PROJECT_DIR$/sm_app/write_to_social_media.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,12 +32,12 @@
     &quot;assignee&quot;: &quot;E-J-bl&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/E-J-bl/Pycharm_projects.git&quot;,
-    &quot;accountId&quot;: &quot;f7e374ab-cdbd-4223-a40f-83ec665cb5d6&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/E-J-bl/dbPractice.git",
+    "accountId": "8b3cb443-32c4-41cc-b537-3dc8bb269e03"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -46,26 +47,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.CreateStudentDatabase.executor": "Run",
-    "Python.DeleteStudentDatabase.executor": "Run",
-    "Python.WriteToStudentDatabase.executor": "Run",
-    "Python.sm_create_table.executor": "Run",
-    "Python.sm_read.executor": "Run",
-    "Python.write_to_social_media.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/ethben0809/Documents/dbPractice",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.CreateStudentDatabase.executor&quot;: &quot;Run&quot;,
+    &quot;Python.DeleteStudentDatabase.executor&quot;: &quot;Run&quot;,
+    &quot;Python.WriteToStudentDatabase.executor&quot;: &quot;Run&quot;,
+    &quot;Python.sm_create_table.executor&quot;: &quot;Run&quot;,
+    &quot;Python.sm_read.executor&quot;: &quot;Run&quot;,
+    &quot;Python.write_to_social_media.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ethben0809/Documents/dbPractice&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ethben0809\Documents\dbPractice\lesson_1" />
@@ -74,8 +75,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-PY-243.21565.199" />
-        <option value="bundled-python-sdk-cab1f2013843-4ae2d6a61b08-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.21565.199" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.19072.16" />
+        <option value="bundled-python-sdk-8336bb23522e-2767605e8bc2-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.19072.16" />
       </set>
     </attachedChunks>
   </component>
@@ -89,6 +90,7 @@
       <updated>1737382544403</updated>
       <workItem from="1737382545430" duration="11000" />
       <workItem from="1737382789168" duration="2344000" />
+      <workItem from="1738094661277" duration="949000" />
     </task>
     <task id="LOCAL-00001" summary="second-edition">
       <option name="closed" value="true" />
@@ -153,11 +155,11 @@
     <option name="LAST_COMMIT_MESSAGE" value="adding more" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/dbPractice$write_to_social_media.coverage" NAME="write_to_social_media Coverage Results" MODIFIED="1737625634415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sm_app" />
+    <SUITE FILE_PATH="coverage/dbPractice$sm_create_table.coverage" NAME="sm_create_table Coverage Results" MODIFIED="1738094902561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sm_app" />
     <SUITE FILE_PATH="coverage/dbPractice$DeleteStudentDatabase.coverage" NAME="DeleteStudentDatabase Coverage Results" MODIFIED="1737385089476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/dbPractice$sm_create_table.coverage" NAME="sm_create_table Coverage Results" MODIFIED="1737625584505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sm_app" />
-    <SUITE FILE_PATH="coverage/dbPractice$CreateStudentDatabase.coverage" NAME="CreateStudentDatabase Coverage Results" MODIFIED="1737383774288" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/dbPractice$WriteToStudentDatabase.coverage" NAME="WriteToStudentDatabase Coverage Results" MODIFIED="1737385099082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/dbPractice$sm_read.coverage" NAME="sm_read Coverage Results" MODIFIED="1737627234622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sm_app" />
+    <SUITE FILE_PATH="coverage/dbPractice$write_to_social_media.coverage" NAME="write_to_social_media Coverage Results" MODIFIED="1738094952542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sm_app" />
+    <SUITE FILE_PATH="coverage/dbPractice$CreateStudentDatabase.coverage" NAME="CreateStudentDatabase Coverage Results" MODIFIED="1737383774288" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/dbPractice$sm_read.coverage" NAME="sm_read Coverage Results" MODIFIED="1738095035414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sm_app" />
   </component>
 </project>
