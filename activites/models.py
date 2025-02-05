@@ -20,6 +20,14 @@ person_activities = sa.Table('person_activities',
                            sa.UniqueConstraint('activity_id', 'person_id')
                            )
 
+activity_location = sa.Table('location_activities',
+                           Base.metadata,
+                           sa.Column('id', sa.Integer, primary_key=True),
+                           sa.Column('activity_id', sa.ForeignKey('activities.id')),
+                           sa.Column('location_id', sa.ForeignKey('location.id')),
+                           sa.UniqueConstraint('activity_id', 'location_id')
+                           )
+
 class Location(Base):
     __tablename__ = "location"
     id: so.Mapped[int]=so.mapped_column(primary_key=True,autoincrement=True)
