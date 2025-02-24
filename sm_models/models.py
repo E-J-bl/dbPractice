@@ -28,6 +28,8 @@ class User(Base):
     nationality: so.Mapped[str]
     posts:so.Mapped[list["Post"]]=so.relationship(back_populates="user")
     liked_posts: so.Mapped[list['Post']] = so.relationship(secondary=likes_table, back_populates='liked_by_users')
+    comments_made: so.Mapped[list['Comment']] = so.relationship(back_populates='user')
+
 
 
 
@@ -39,6 +41,7 @@ class Post(Base):
     user: so.Mapped[list["User"]] = so.relationship('User',back_populates="posts")
     user_id: so.Mapped[int]= so.mapped_column(sa.ForeignKey('users.id'))
     liked_by_users: so.Mapped[list["User"]]= so.relationship(secondary=likes_table, back_populates='liked_posts')
+    comments: so.Mapped[list["Comment"]] = so.relationship(back_populates='post')
 
 class Comment(Base):
     __tablename__ = 'comments'
