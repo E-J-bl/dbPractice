@@ -47,3 +47,23 @@ users[3].liked_posts.append(posts[2])
 session.add_all(users)
 session.commit()
 
+comments = [
+    Comment(user_id=users[1].id, comment="Wow, the Rockies sound incredible! Thanks for sharing your experience."),
+    Comment(user_id=users[2].id, comment="I'd love to go to the Rockies."),
+    Comment(user_id=users[2].id, comment="I tried the chocolate cake recipe, and it was a hit! Thanks for the great recipe."),
+    Comment(user_id=users[3].id, comment="Fascinating insights on tech innovations. Can't wait to see what the future holds!"),
+    Comment(user_id=users[0].id, comment="Great tips for traveling in Australia. I'll definitely keep these in mind for my next trip.")
+]
+
+posts[0].comments.append(comments[0])
+posts[0].comments.append(comments[1])
+posts[1].comments.append(comments[2])
+posts[2].comments.append(comments[3])
+posts[3].comments.append(comments[4])
+
+session.add_all(comments)
+session.commit()
+
+
+
+
