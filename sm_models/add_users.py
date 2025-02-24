@@ -1,6 +1,6 @@
 import sqlalchemy as sa
 import sqlalchemy.orm as so
-from models import User, Post, Base
+from models import User,Comment, Post, Base
 
 # Create an engine
 engine = sa.create_engine('sqlite:///social_media.db', echo=True)
