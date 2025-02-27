@@ -1,6 +1,6 @@
 import sqlalchemy as sa
 import sqlalchemy.orm as so
-from models import User,Comment, Post, Base
+from models import User, Post, Comment, Base
 
 # Create an engine
 engine = sa.create_engine('sqlite:///social_media.db', echo=True)
@@ -47,6 +47,7 @@ users[3].liked_posts.append(posts[2])
 session.add_all(users)
 session.commit()
 
+# Create examples of Comments
 comments = [
     Comment(user_id=users[1].id, comment="Wow, the Rockies sound incredible! Thanks for sharing your experience."),
     Comment(user_id=users[2].id, comment="I'd love to go to the Rockies."),
@@ -63,7 +64,4 @@ posts[3].comments.append(comments[4])
 
 session.add_all(comments)
 session.commit()
-
-
-
 
