@@ -43,3 +43,6 @@ class CLI:
         self.login()
 
 
+
+def o():
+    pass
