@@ -29,28 +29,12 @@ class Controller:
 
     def get_posts(self, user_name: str) -> list[dict]:
         with so.Session(bind=self.engine) as session:
-            user_names=self.get_user_names()
-            print(user_names,user_name)
-            if user_name not in user_names:
-                return [{"title":'Not a valid user',"description":"Please enter a valid user name","number_likes":0}]
             user = session.scalars(sa.select(User).where(User.name == user_name)).one_or_none()
             posts_info = [{'id': post.id,
                            'title': post.title,
                            'description': post.description,
                            'number_likes': len(post.liked_by_users),
                            }
-                          for post in user.posts]
-        return posts_info
-
-    def get_all_posts(self) -> list[dict]:
-        with so.Session(bind=self.engine) as session:
-            allp = session.scalars(sa.select(User)).all()
-            posts_info = [{'id': post.id,
-                           'title': post.title,
-                           'description': post.description,
-                           'number_likes': len(post.liked_by_users),
-                           }
-                          for user in allp
                           for post in user.posts]
         return posts_info
 
@@ -99,57 +83,30 @@ class CLI:
         print(f'Name: {self.controller.current_user.name}')
         print(f'Age: {self.controller.current_user.age}')
         print(f'Nationality: {self.controller.current_user.nationality}')
+        self.show_posts(self.controller.current_user.name)
 
-
-        menu_items = {'Show posts from another user': [self.show_posts,[]],
-                      'Look up user':[self.search_user,[]],
-                      'Show your posts':[self.search_user,[self.controller.current_user.name]],
-                      'Logout': [self.login,[]]}
+        menu_items = {'Show posts from another user': self.show_posts,
+                      'Logout': self.login}
 
         menu_choice = pyip.inputMenu(list(menu_items.keys()),
                                      prompt='Select an action\n',
                                      numbered=True,
                                      )
-        menu_items[menu_choice][0](*menu_items[menu_choice][1])
+        menu_items[menu_choice]()
         if menu_choice != 'Logout':
             self.user_home()
 
     def show_posts(self, user_name: str | None = None):
         if user_name is None:
             users = self.controller.get_user_names()
-            menu_choice = pyip.inputMenu(users+["All"],
+            menu_choice = pyip.inputMenu(users,
                                          prompt='Select a user\n',
                                          numbered=True,
                                          )
             user_name = menu_choice
 
         self.show_title(f"{user_name}'s Posts")
-        if user_name != 'All':
-            posts = self.controller.get_posts(user_name)
-            for post in posts:
-                print(f'Title: {post["title"]}')
-                print(f'Content: {post["description"]}')
-                print(f'Likes: {post["number_likes"]}')
-
-            if not posts:
-                print('No Posts')
-        else:
-            posts = self.controller.get_all_posts()
-            for post in posts:
-                print(f'Title: {post["title"]}')
-                print(f'Content: {post["description"]}')
-                print(f'Likes: {post["number_likes"]}')
-
-            if not posts:
-                print('No Posts')
-
-    def search_user(self, user_name: str | None = None):
-        user=user_name
-        if user_name is None:
-            user= input('Enter username: ')
-
-        posts = self.controller.get_posts(user)
-        print("PRINTING POSTS")
+        posts = self.controller.get_posts(user_name)
         for post in posts:
             print(f'Title: {post["title"]}')
             print(f'Content: {post["description"]}')
@@ -158,9 +115,6 @@ class CLI:
         if not posts:
             print('No Posts')
 
-        continues=input('Continue? (y/n) ')
-        if continues.lower() == 'y':
-            self.search_user()
 
-cli = CLI()
+# cli = CLI()
 controller = Controller()
