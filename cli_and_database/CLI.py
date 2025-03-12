@@ -1,9 +1,9 @@
 import sqlalchemy as sa
 import sqlalchemy.orm as so
+from sqlalchemy.sql.functions import current_user
 
 from models import User, Post, Comment
 import pyinputplus as pyip
-
 
 class Controller:
     def __init__(self, db_location='sqlite:///social_media.db'):
@@ -34,10 +34,39 @@ class Controller:
                            'title': post.title,
                            'description': post.description,
                            'number_likes': len(post.liked_by_users),
+                           'comments': [{comment.user.name:comment.comment} for comment in post.comments]
                            }
                           for post in user.posts]
         return posts_info
 
+    def create_post(self,title,description):
+        with so.Session(bind=self.engine) as session:
+            user = session.merge(self.current_user)
+            post=Post(title=title, description=description, user=user)
+            session.add(post)
+            session.commit()
+
+    def like_post(self,post_id):
+        with so.Session(bind=self.engine) as session:
+            user = session.merge(self.current_user)
+            post = session.get(Post, post_id)
+            if post in user.liked_posts:
+                user.liked_posts.remove(post)
+            else:
+                user.liked_posts.append(post)
+            session.commit()
+    def liked_by_user(self,post_id):
+        with so.Session(bind=self.engine) as session:
+            user = session.merge(self.current_user)
+            post = session.get(Post, post_id)
+            return post in user.liked_posts
+    def make_comment(self, post_id, text):
+        with so.Session(bind=self.engine) as session:
+            user = session.merge(self.current_user)
+            post = session.get(Post, post_id)
+            comment=Comment(post=post, user=user, comment=text)
+            session.add(comment)
+            session.commit()
 
 class CLI:
     def __init__(self):
@@ -83,10 +112,12 @@ class CLI:
         print(f'Name: {self.controller.current_user.name}')
         print(f'Age: {self.controller.current_user.age}')
         print(f'Nationality: {self.controller.current_user.nationality}')
-        self.show_posts(self.controller.current_user.name)
+
 
         menu_items = {'Show posts from another user': self.show_posts,
-                      'Logout': self.login}
+                      'Show posts from self':self.show_self,
+                      'Create a post': self.make_post,
+                      'Logout': self.login,}
 
         menu_choice = pyip.inputMenu(list(menu_items.keys()),
                                      prompt='Select an action\n',
@@ -95,7 +126,8 @@ class CLI:
         menu_items[menu_choice]()
         if menu_choice != 'Logout':
             self.user_home()
-
+    def show_self(self):
+        self.show_posts(self.controller.current_user.name)
     def show_posts(self, user_name: str | None = None):
         if user_name is None:
             users = self.controller.get_user_names()
@@ -108,13 +140,25 @@ class CLI:
         self.show_title(f"{user_name}'s Posts")
         posts = self.controller.get_posts(user_name)
         for post in posts:
+            liked=self.controller.liked_by_user(post["id"])
             print(f'Title: {post["title"]}')
             print(f'Content: {post["description"]}')
-            print(f'Likes: {post["number_likes"]}')
-
+            print(f'Likes: {post["number_likes"]}'+liked*' (you have liked this post)')
+            print(f'Comments: {post["comments"]}')
+            like = input(('Like current post? [Y/N]:'))
+            if like in ['Y','y','yes',]:
+              self.controller.like_post(post["id"])
+            if input("Would you like to make a comment? [Y/N]:") in ['Y','y','yes',]:
+                text = input("Input text:")
+                self.controller.make_comment(post["id"], text)
         if not posts:
             print('No Posts')
 
+    def make_post(self):
+        title = input('Enter title: ')
+        description = input('Enter description: ')
+        self.controller.create_post(title, description)
 
-# cli = CLI()
+
+cli = CLI()
 controller = Controller()

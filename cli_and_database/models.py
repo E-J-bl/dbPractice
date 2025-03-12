@@ -11,7 +11,9 @@ likes_table = sa.Table(
     sa.Column('id', sa.Integer, primary_key=True),
     sa.Column('user_id', sa.Integer, sa.ForeignKey('users.id'), nullable=False),
     sa.Column('post_id', sa.Integer, sa.ForeignKey('posts.id'), nullable=False),
+    sa.UniqueConstraint('user_id', 'post_id', name='uq_user_post')
 )
+
 
 class User(Base):
     __tablename__ = 'users'

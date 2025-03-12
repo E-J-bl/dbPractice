@@ -36,6 +36,7 @@ class TestDatabase:
         assert rayhan.age == 20
         assert rayhan.gender == "male"
         assert rayhan.nationality is None
+        db_session.rollback()
 
     def test_invalid_user(self,db_session):
         user=User(age=7,nationality='uk')
@@ -57,5 +58,31 @@ class TestDatabase:
         po=db_session.scalar(qry)
         assert po is not None
         assert po.description=="test content"
+        db_session.rollback()
 
+    def test_comment(self,db_session):
+        user = User(name="r", age=210, gender="f")
+        db_session.add(user)
+        db_session.commit()
+        post = Post(title="Tes 3t", description="test content 3", user=user)
+        db_session.add(post)
+        db_session.commit()
+        comment=Comment(user=user,post=post,comment='test response')
+        db_session.add(comment)
+        db_session.commit()
 
+        db_session.rollback()
+    def test_like_post(self,db_session):
+        user = User(name="rale", age=130, gender="Other")
+        db_session.add(user)
+        db_session.commit()
+        post = Post(title="test2", description="test content 2", user=user)
+        db_session.add(post)
+        db_session.commit()
+        user.liked_posts.append(post)
+        assert post in user.liked_posts
+        with pytest.raises(IntegrityError):
+            user.liked_posts.append(post)
+            db_session.commit()
+
+        db_session.rollback()
