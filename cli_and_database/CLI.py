@@ -159,6 +159,6 @@ class CLI:
         description = input('Enter description: ')
         self.controller.create_post(title, description)
 
-
-cli = CLI()
-controller = Controller()
+if __name__ == '__main__':
+    cli = CLI()
+    controller = Controller()

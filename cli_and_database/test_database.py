@@ -4,10 +4,13 @@ import sqlalchemy.orm as so
 from sqlalchemy.exc import IntegrityError
 
 
-from models import User,Comment,Post,Base
+from cli_and_database.models import (User,Comment,Post,Base)
+from cli_and_database.write_to_db import write_initial_data
+from cli_and_database.CLI import Controller
 
 
-test_db_location="sqlite:///:memory:"
+
+test_db_location="sqlite:///test_database.db"
 
 
 def test_test():
@@ -86,3 +89,53 @@ class TestDatabase:
             db_session.commit()
 
         db_session.rollback()
+
+
+class TestController:
+    @pytest.fixture(scope="class",autouse=True)
+    def test_db(self):
+        engine = sa.create_engine(test_db_location)
+        Base.metadata.create_all(engine)
+        write_initial_data(engine)
+        yield
+        #afthe the fixture is used drop the data from the database
+        Base.metadata.drop_all(engine)
+
+    @pytest.fixture(scope="class")
+    def controller(self):
+        control = Controller(db_location=test_db_location)
+        return control
+
+    def test_set_current_user_from_name(self,controller):
+        controller.set_current_user_from_name(name="Alice")
+        assert "Alice" == controller.current_user.name
+        assert controller.current_user.id==1
+        assert 30 == controller.current_user.age
+
+    def test_get_user_names(self,controller):
+        users=controller.get_user_names()
+        assert len(users)==4
+        assert users==['Alice','Bob','Charlie','Diana']
+
+    def test_create_user(self,controller):
+        us=controller.create_user('Ethil',74,'female','American')
+        assert controller.current_user.name=='Ethil'
+        assert controller.current_user.age==74
+        assert controller.current_user.gender=="female"
+        assert controller.current_user.nationality=='American'
+
+    def test_get_posts(self):
+        assert False
+
+    def test_create_post(self):
+        assert False
+
+    def test_like_post(self):
+        assert False
+
+    def test_liked_by_user(self):
+        assert False
+
+    def test_make_comment(self):
+        assert False
+
